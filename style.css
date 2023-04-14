@@ -130,7 +130,7 @@ button:not(:active) {
 }
 .contentLeft p {
   font-weight: 300;
-  margin-top: 20px;
+  margin-top: 15px;
   font-size: 25px;
   color: #cdcdcd;
 }
@@ -146,4 +146,106 @@ footer a {
 }
 footer a:hover {
   color: #fab427;
+}
+.menuMobile {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  header {
+    display: none;
+  }
+  .menuMobile {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 20px 0px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .menuLogo img {
+    width: 60px;
+  }
+  .homeContent {
+    flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
+    padding: 60px;
+  }
+  .menuTwo {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    height: 30vh;
+    width: 200px;
+    background-color: #fab427;
+    transform: translateX(200px);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+  }
+  .menuMobile .menuTwo nav {
+    position: fixed;
+    height: 100vh;
+    padding: 20px;
+  }
+
+  .menuTwo a {
+    color: #fff;
+    font-weight: 600;
+    font-size: 30px;
+  }
+  .btnFechar {
+    font-size: 30px;
+    z-index: 999;
+    color: #fff;
+    background-color: #ff6a00;
+    width: 30px;
+    font-weight: bold;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  .menu-open {
+    transform: translateX(0);
+  }
+
+  .logoMobile img {
+    width: 120px;
+  }
+  .contentLeft {
+    z-index: 99;
+  }
+  .contentLeft h1 {
+    font-size: 36px;
+  }
+  .contentLeft h2 {
+    font-size: 20px;
+  }
+  .contentLeft h2,
+  p {
+    margin-top: 15px;
+  }
+  .contentLeft p {
+    font-size: 26px;
+  }
+
+  .contentRight {
+    bottom: 20%;
+    overflow: hidden;
+    width: 100vw;
+    height: 50vh;
+  }
+  .contentRight img {
+    width: 100%;
+    height: 400px;
+  }
+  .contentLeft {
+    width: 100%;
+  }
+  footer {
+    display: none;
+  }
 }
